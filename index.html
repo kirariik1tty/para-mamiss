@@ -1,215 +1,538 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  
-</html>
-<header class="navbar">
-   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
-  <div class="nav-left">
-    <button class="circle-button">♡</button>
-    <button class="circle-button">+</button>
-  </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <nav class="nav-menu">
-    <a href="#" class="active">Início</a>
-    <a href="#">Memórias</a>
-    <a href="#">Mensagens</a>
-  </nav>
+  <link rel="stylesheet" href="style.css">
 
-  <div class="nav-right">
-    <button class="login-button">Entrar</button>
-    <button class="signup-button">♡ Para você</button>
-  </div>
+  <title>Para Mamãe ♡</title>
+</head>
 
-</header>
+<body>
 
+  <!-- =========================
+       NAVBAR
+  ========================= -->
 
-<main>
+  <header class="navbar">
 
-  <!-- HERO -->
+    <div class="nav-left">
 
-  <section class="hero">
+      <button
+        class="circle-button"
+        id="profileButton"
+        aria-label="Abrir perfil"
+      >
+        ♡
+      </button>
 
-    <div class="hero-content">
-
-      <span class="hero-small">PARA A MELHOR MÃE ♡</span>
-
-      <h1>Feliz aniversário,<br>mãe.</h1>
-
-      <p>
-        Um pequeno cantinho feito especialmente
-        para celebrar você e todas as memórias
-        que construímos juntas.
-      </p>
-
-      <a href="#" class="read-more">Ler mais →</a>
-
-      <div class="slider-dots">
-        <span class="dot active-dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
-
-    </div>
-
-    <div class="hero-decoration">
-      ♡
-    </div>
-
-    <div class="hero-photo">
-      <div class="photo-placeholder">
-        FOTO
-      </div>
-    </div>
-
-  </section>
-
-
-  <!-- PARTE INFERIOR -->
-
-  <section class="content-grid">
-
-
-    <!-- MEMÓRIAS -->
-
-    <div class="artwork-section">
-
-      <div class="section-title">
-        <h2>Memórias</h2>
-        <span>→</span>
-      </div>
-
-      <div class="memory-grid">
-
-        <div class="memory-card">
-          <div class="memory-photo">FOTO</div>
-          <span>uma lembrança ₊⊹</span>
-        </div>
-
-        <div class="memory-card">
-          <div class="memory-photo">FOTO</div>
-          <span>um momento ⋆.˚</span>
-        </div>
-
-      </div>
-
-      <button class="view-button">
-        Ver mais
+      <button
+        class="circle-button"
+        id="addButton"
+        aria-label="Adicionar"
+      >
+        +
       </button>
 
     </div>
 
 
-    <!-- MENSAGENS -->
+    <nav class="nav-menu">
 
-    <div class="search-section">
+      <a href="#inicio" class="active">
+        Início
+      </a>
 
-      <div class="section-title">
-        <h2>Cartinhas</h2>
-        <span>×</span>
-      </div>
+      <a href="#memorias">
+        Memórias
+      </a>
 
-      <div class="message-list">
+      <a href="#mensagens">
+        Mensagens
+      </a>
 
-        <div class="message">
-          <span>♡</span>
-          <p>Uma mensagem para você</p>
-        </div>
+    </nav>
 
-        <div class="message">
-          <span>♡</span>
-          <p>Coisas que admiro em você</p>
-        </div>
 
-        <div class="message">
-          <span>♡</span>
-          <p>Uma memória especial</p>
-        </div>
+    <div class="nav-right">
 
-        <div class="message selected">
-          <span>♡</span>
-          <p>Por que eu te amo</p>
-        </div>
+      <button
+        class="login-button"
+        id="loginButton"
+      >
+        Entrar
+      </button>
 
-        <div class="message">
-          <span>♡</span>
-          <p>Para ler quando sentir saudade</p>
-        </div>
-
-      </div>
+      <button
+        class="signup-button"
+        id="forYouButton"
+      >
+        ♡ Para você
+      </button>
 
     </div>
 
+  </header>
 
-    <!-- DESTAQUES -->
 
-    <div class="ranking-section">
+  <!-- =========================
+       CONTEÚDO PRINCIPAL
+  ========================= -->
 
-      <div class="ranking-card">
+  <main id="inicio">
 
-        <div class="ranking-icon">☘︎</div>
 
-        <div>
-          <h3>Minha inspiração</h3>
-          <p>
-            Uma das pessoas que mais me
-            ensinam todos os dias.
-          </p>
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <span class="hero-small">
+          PARA A MELHOR MÃE ♡
+        </span>
+
+
+        <h1>
+          Feliz aniversário,<br>
+          mãe.
+        </h1>
+
+
+        <p>
+          Um pequeno cantinho feito especialmente
+          para celebrar você e todas as memórias
+          que construímos juntas.
+        </p>
+
+
+        <button
+          class="read-more"
+          id="readMoreButton"
+        >
+          Ler mais →
+        </button>
+
+
+        <div class="slider-dots">
+
+          <button
+            class="dot active-dot"
+            data-slide="0"
+            aria-label="Slide 1"
+          ></button>
+
+          <button
+            class="dot"
+            data-slide="1"
+            aria-label="Slide 2"
+          ></button>
+
+          <button
+            class="dot"
+            data-slide="2"
+            aria-label="Slide 3"
+          ></button>
+
         </div>
 
       </div>
 
 
-      <div class="ranking-card">
+      <div class="hero-decoration">
+        ♡
+      </div>
 
-        <div class="ranking-icon">ʚɞ</div>
 
-        <div>
-          <h3>Meu porto seguro</h3>
-          <p>
-            Onde encontro carinho,
-            cuidado e acolhimento.
-          </p>
+      <div
+        class="hero-photo"
+        id="heroPhoto"
+      >
+
+        <div class="photo-placeholder">
+          FOTO
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PARTE INFERIOR
+    ========================= -->
+
+    <section class="content-grid">
+
+
+      <!-- =========================
+           MEMÓRIAS
+      ========================= -->
+
+      <div
+        class="artwork-section"
+        id="memorias"
+      >
+
+        <div class="section-title">
+
+          <h2>
+            Memórias
+          </h2>
+
+          <button
+            class="section-action"
+            id="memoriesArrow"
+            aria-label="Abrir memórias"
+          >
+            →
+          </button>
+
+        </div>
+
+
+        <div class="memory-grid">
+
+
+          <button
+            class="memory-card"
+            data-memory="lembranca"
+          >
+
+            <div class="memory-photo">
+              FOTO
+            </div>
+
+            <span>
+              uma lembrança ₊⊹
+            </span>
+
+          </button>
+
+
+          <button
+            class="memory-card"
+            data-memory="momento"
+          >
+
+            <div class="memory-photo">
+              FOTO
+            </div>
+
+            <span>
+              um momento ⋆.˚
+            </span>
+
+          </button>
+
+
+        </div>
+
+
+        <button
+          class="view-button"
+          id="viewMoreButton"
+        >
+          Ver mais
+        </button>
+
+      </div>
+
+
+
+      <!-- =========================
+           CARTINHAS
+      ========================= -->
+
+      <div
+        class="search-section"
+        id="mensagens"
+      >
+
+        <div class="section-title">
+
+          <h2>
+            Cartinhas
+          </h2>
+
+          <button
+            class="section-action"
+            id="messagesButton"
+            aria-label="Abrir mensagens"
+          >
+            ×
+          </button>
+
+        </div>
+
+
+        <div class="message-list">
+
+
+          <button
+            class="message"
+            data-message="mensagem"
+          >
+
+            <span>♡</span>
+
+            <p>
+              Uma mensagem para você
+            </p>
+
+          </button>
+
+
+          <button
+            class="message"
+            data-message="admiracao"
+          >
+
+            <span>♡</span>
+
+            <p>
+              Coisas que admiro em você
+            </p>
+
+          </button>
+
+
+          <button
+            class="message"
+            data-message="memoria"
+          >
+
+            <span>♡</span>
+
+            <p>
+              Uma memória especial
+            </p>
+
+          </button>
+
+
+          <button
+            class="message selected"
+            data-message="amor"
+          >
+
+            <span>♡</span>
+
+            <p>
+              Por que eu te amo
+            </p>
+
+          </button>
+
+
+          <button
+            class="message"
+            data-message="saudade"
+          >
+
+            <span>♡</span>
+
+            <p>
+              Para ler quando sentir saudade
+            </p>
+
+          </button>
+
+
         </div>
 
       </div>
 
 
-      <div class="ranking-card">
 
-        <div class="ranking-icon">𐙚</div>
+      <!-- =========================
+           DESTAQUES
+      ========================= -->
 
-        <div>
-          <h3>Minha pessoa favorita</h3>
-          <p>
-            Uma pequena definição
-            de alguém enorme na minha vida.
-          </p>
+      <div class="ranking-section">
+
+
+        <button
+          class="ranking-card"
+          data-feature="inspiracao"
+        >
+
+          <div class="ranking-icon">
+            ☘︎
+          </div>
+
+          <div>
+
+            <h3>
+              Minha inspiração
+            </h3>
+
+            <p>
+              Uma das pessoas que mais me
+              ensinam todos os dias.
+            </p>
+
+          </div>
+
+        </button>
+
+
+        <button
+          class="ranking-card"
+          data-feature="porto"
+        >
+
+          <div class="ranking-icon">
+            ʚɞ
+          </div>
+
+          <div>
+
+            <h3>
+              Meu porto seguro
+            </h3>
+
+            <p>
+              Onde encontro carinho,
+              cuidado e acolhimento.
+            </p>
+
+          </div>
+
+        </button>
+
+
+        <button
+          class="ranking-card"
+          data-feature="favorita"
+        >
+
+          <div class="ranking-icon">
+            𐙚
+          </div>
+
+          <div>
+
+            <h3>
+              Minha pessoa favorita
+            </h3>
+
+            <p>
+              Uma pequena definição
+              de alguém enorme na minha vida.
+            </p>
+
+          </div>
+
+        </button>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         AVATARES
+    ========================= -->
+
+    <section class="floating-cards">
+
+
+      <div class="avatar-card">
+
+        <button
+          class="avatar-close"
+          aria-label="Fechar"
+        >
+          ×
+        </button>
+
+        <div class="avatar">
+          ♡
         </div>
 
       </div>
 
+
+      <div class="avatar-card">
+
+        <button
+          class="avatar-close"
+          aria-label="Fechar"
+        >
+          ×
+        </button>
+
+        <div class="avatar">
+          ✦
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =========================
+       MODAL
+  ========================= -->
+
+  <div
+    class="modal"
+    id="modal"
+  >
+
+    <div class="modal-content">
+
+
+      <button
+        class="modal-close"
+        id="modalClose"
+        aria-label="Fechar janela"
+      >
+        ×
+      </button>
+
+
+      <span class="modal-decoration">
+        ♡
+      </span>
+
+
+      <h2 id="modalTitle">
+        Título
+      </h2>
+
+
+      <p id="modalText">
+        Conteúdo
+      </p>
+
+
+      <button
+        class="modal-action"
+        id="modalAction"
+      >
+        Continuar →
+      </button>
+
+
     </div>
 
-  </section>
+  </div>
 
 
-  <!-- AVATARES -->
+</body>
 
-  <section class="floating-cards">
-
-    <div class="avatar-card">
-      <button>×</button>
-      <div class="avatar">♡</div>
-    </div>
-
-    <div class="avatar-card">
-      <button>×</button>
-      <div class="avatar">✦</div>
-    </div>
-
-  </section>
-
-</main>
+</html>

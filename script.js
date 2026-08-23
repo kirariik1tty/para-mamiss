@@ -1,40 +1,53 @@
-/* ==================================================
-   SITE PARA MAMÃE ♡
-   JAVASCRIPT
-================================================== */
-
-
-/* ==================================================
-   BANCO DE MEMÓRIAS
-================================================== */
+/* =========================
+   MEMÓRIAS
+========================= */
 
 const memories = {
 
   lembranca: {
+
     title: "Uma lembrança ₊⊹",
 
-    text: "Aqui vamos colocar uma lembrança especial de vocês duas. Pode ser uma viagem, um aniversário, uma conversa ou simplesmente um daqueles momentos pequenos que ficaram guardados no coração.",
+    image: "imagens/memoria-1.jpg",
 
-    button: "Guardar essa lembrança ♡"
+    text:
+      "Uma lembrança especial que quero guardar com você para sempre.",
+
+    button:
+      "Guardar essa lembrança ♡"
+
   },
 
 
   momento: {
+
     title: "Um momento ⋆.˚",
 
-    text: "Aqui vai entrar outra memória especial. A ideia é contar não apenas o que aconteceu, mas por que aquele momento foi importante para você.",
+    image: "imagens/memoria-2.jpg",
 
-    button: "Que memória bonita ♡"
+    text:
+      "Um daqueles pequenos momentos que acabaram se tornando enormes na minha memória.",
+
+    button:
+      "Que memória bonita ♡"
+
   }
 
 };
 
 
-/* ==================================================
-   MODAL
-================================================== */
+/* =========================
+   ELEMENTOS DO MODAL
+========================= */
 
-const modal = document.getElementById("modal");
+const modal =
+  document.getElementById("modal");
+
+const modalClose =
+  document.getElementById("modalClose");
+
+const modalImage =
+  document.getElementById("modalImage");
 
 const modalTitle =
   document.getElementById("modalTitle");
@@ -45,144 +58,181 @@ const modalText =
 const modalAction =
   document.getElementById("modalAction");
 
-const modalClose =
-  document.getElementById("modalClose");
 
-
-/* ==================================================
-   ABRIR UMA MEMÓRIA
-================================================== */
+/* =========================
+   ABRIR MEMÓRIA
+========================= */
 
 const memoryCards =
   document.querySelectorAll(".memory-card");
 
 
-memoryCards.forEach(card => {
+memoryCards.forEach(function(card) {
 
-  card.addEventListener("click", () => {
+  card.addEventListener("click", function() {
 
-    // Descobre qual memória foi clicada
     const memoryName =
       card.dataset.memory;
 
-
-    // Procura essa memória no nosso "banco"
     const memory =
       memories[memoryName];
 
 
-    // Se não encontrar, não faz nada
     if (!memory) {
       return;
     }
 
 
-    // Coloca o título no modal
+    modalImage.src =
+      memory.image;
+
+    modalImage.alt =
+      memory.title;
+
     modalTitle.textContent =
       memory.title;
 
-
-    // Coloca o texto no modal
     modalText.textContent =
       memory.text;
 
-
-    // Coloca o texto do botão
     modalAction.textContent =
       memory.button;
 
 
-    // Mostra o modal
-    modal.classList.add("active");
+    modal.classList.add("show");
 
   });
 
 });
 
 
-/* ==================================================
-   FECHAR O MODAL PELO X
-================================================== */
+/* =========================
+   FECHAR MODAL
+========================= */
 
-modalClose.addEventListener("click", () => {
+modalClose.addEventListener(
+  "click",
+  function() {
 
-  modal.classList.remove("active");
-
-});
-
-
-/* ==================================================
-   FECHAR CLICANDO FORA
-================================================== */
-
-modal.addEventListener("click", event => {
-
-  if (event.target === modal) {
-
-    modal.classList.remove("active");
+    modal.classList.remove("show");
 
   }
+);
 
-});
 
+/* =========================
+   CLICAR FORA DO MODAL
+========================= */
 
-/* ==================================================
-   FECHAR COM ESC
-================================================== */
+modal.addEventListener(
+  "click",
+  function(event) {
 
-document.addEventListener("keydown", event => {
+    if (event.target === modal) {
 
-  if (event.key === "Escape") {
+      modal.classList.remove("show");
 
-    modal.classList.remove("active");
+    }
 
   }
+);
 
-});
+
+/* =========================
+   TECLA ESC
+========================= */
+
+document.addEventListener(
+  "keydown",
+  function(event) {
+
+    if (
+      event.key === "Escape" &&
+      modal.classList.contains("show")
+    ) {
+
+      modal.classList.remove("show");
+
+    }
+
+  }
+);
 
 
-/* ==================================================
-   BOTÃO "VER MAIS"
-================================================== */
+/* =========================
+   BOTÃO VER MAIS
+========================= */
 
 const viewMoreButton =
   document.getElementById("viewMoreButton");
 
 
-viewMoreButton.addEventListener("click", () => {
+viewMoreButton.addEventListener(
+  "click",
+  function() {
 
-  // Por enquanto, abre uma mensagem.
-  // Depois vamos transformar isso em uma
-  // página/galeria de memórias.
+    alert(
+      "Nosso álbum de memórias vai aparecer aqui ♡"
+    );
 
-  modalTitle.textContent =
-    "Mais memórias ♡";
-
-  modalText.textContent =
-    "Em breve teremos aqui um álbum completo com todas as nossas lembranças especiais.";
-
-  modalAction.textContent =
-    "Mal posso esperar ♡";
-
-  modal.classList.add("active");
-
-});
+  }
+);
 
 
-/* ==================================================
-   SETA DA SEÇÃO "MEMÓRIAS"
-================================================== */
+/* =========================
+   AVATARES
+========================= */
 
-const memoriesArrow =
-  document.getElementById("memoriesArrow");
+const avatarCloseButtons =
+  document.querySelectorAll(".avatar-close");
 
 
-memoriesArrow.addEventListener("click", () => {
+avatarCloseButtons.forEach(
+  function(button) {
 
-  document
-    .getElementById("memorias")
-    .scrollIntoView({
-      behavior: "smooth"
-    });
+    button.addEventListener(
+      "click",
+      function() {
+
+        button
+          .closest(".avatar-card")
+          .remove();
+
+      }
+    );
+
+  }
+);
+
+
+/* =========================
+   DOTS DO HERO
+========================= */
+
+const dots =
+  document.querySelectorAll(".dot");
+
+
+dots.forEach(function(dot) {
+
+  dot.addEventListener(
+    "click",
+    function() {
+
+      dots.forEach(function(item) {
+
+        item.classList.remove(
+          "active-dot"
+        );
+
+      });
+
+
+      dot.classList.add(
+        "active-dot"
+      );
+
+    }
+  );
 
 });

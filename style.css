@@ -522,15 +522,41 @@ main {
     box-shadow 0.25s ease;
 }
 
+.memory-card {
+  padding: 0;
+
+  overflow: hidden;
+
+  border: none;
+
+  border-radius: 18px;
+
+  background-color: white;
+
+  color: var(--roxo-escuro);
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
 
 .memory-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
 
   box-shadow:
-    0 12px 25px
+    0 15px 30px
     rgba(75, 50, 80, 0.15);
 }
 
+
+.memory-card:active {
+  transform: translateY(-2px) scale(0.99);
+}
 
 .memory-photo {
   height: 210px;
@@ -547,14 +573,29 @@ main {
 }
 
 
-.memory-card span {
-  display: block;
-
+.memory-info {
   padding: 12px;
-
-  font-size: 12px;
 }
 
+
+.memory-info span {
+  display: block;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+.memory-info small {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #8B808B;
+
+  font-size: 10px;
+}
 
 .view-button {
   width: 100%;

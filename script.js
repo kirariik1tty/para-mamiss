@@ -1,400 +1,188 @@
-// =========================
-// ELEMENTOS DO MODAL
-// =========================
-
-const modal = document.getElementById("modal");
-const modalTitle = document.getElementById("modalTitle");
-const modalText = document.getElementById("modalText");
-const modalAction = document.getElementById("modalAction");
-const modalClose = document.getElementById("modalClose");
+/* ==================================================
+   SITE PARA MAMÃE ♡
+   JAVASCRIPT
+================================================== */
 
 
-// =========================
-// CONTEÚDO DAS MEMÓRIAS
-// =========================
+/* ==================================================
+   BANCO DE MEMÓRIAS
+================================================== */
 
 const memories = {
 
   lembranca: {
     title: "Uma lembrança ₊⊹",
-    text: "Aqui vamos colocar uma lembrança especial que você e sua mãe viveram juntas.",
-    action: "Guardar essa lembrança ♡"
+
+    text: "Aqui vamos colocar uma lembrança especial de vocês duas. Pode ser uma viagem, um aniversário, uma conversa ou simplesmente um daqueles momentos pequenos que ficaram guardados no coração.",
+
+    button: "Guardar essa lembrança ♡"
   },
+
 
   momento: {
     title: "Um momento ⋆.˚",
-    text: "Aqui podemos colocar uma história pequena, engraçada ou especial que ficou guardada na memória.",
-    action: "Continuar →"
+
+    text: "Aqui vai entrar outra memória especial. A ideia é contar não apenas o que aconteceu, mas por que aquele momento foi importante para você.",
+
+    button: "Que memória bonita ♡"
   }
 
 };
 
 
-// =========================
-// CONTEÚDO DAS CARTINHAS
-// =========================
+/* ==================================================
+   MODAL
+================================================== */
 
-const messages = {
+const modal = document.getElementById("modal");
 
-  mensagem: {
-    title: "Uma mensagem para você ♡",
-    text: "Feliz aniversário, mãe. Esse pequeno cantinho foi feito especialmente para você.",
-    action: "♡"
-  },
+const modalTitle =
+  document.getElementById("modalTitle");
 
-  admiracao: {
-    title: "Coisas que admiro em você",
-    text: "Aqui vamos colocar todas as pequenas e grandes coisas que fazem você ser uma pessoa tão importante para mim.",
-    action: "Continuar →"
-  },
+const modalText =
+  document.getElementById("modalText");
 
-  memoria: {
-    title: "Uma memória especial",
-    text: "Algumas lembranças merecem ser revisitadas de vez em quando.",
-    action: "Lembrar ♡"
-  },
+const modalAction =
+  document.getElementById("modalAction");
 
-  amor: {
-    title: "Por que eu te amo",
-    text: "Aqui vai entrar uma carta contando todas aquelas razões, grandes e pequenas, pelas quais você é tão importante para mim.",
-    action: "♡"
-  },
-
-  saudade: {
-    title: "Para ler quando sentir saudade",
-    text: "Se algum dia sentir saudade, volte aqui. Esse cantinho sempre vai guardar um pouco de nós.",
-    action: "Ficar mais um pouquinho"
-  }
-
-};
+const modalClose =
+  document.getElementById("modalClose");
 
 
-// =========================
-// CONTEÚDO DOS DESTAQUES
-// =========================
+/* ==================================================
+   ABRIR UMA MEMÓRIA
+================================================== */
 
-const features = {
-
-  inspiracao: {
-    title: "Minha inspiração ☘︎",
-    text: "Uma das pessoas que mais me ensinam todos os dias.",
-    action: "Continuar →"
-  },
-
-  porto: {
-    title: "Meu porto seguro ʚɞ",
-    text: "Onde encontro carinho, cuidado e acolhimento.",
-    action: "♡"
-  },
-
-  favorita: {
-    title: "Minha pessoa favorita 𐙚",
-    text: "Uma pequena definição de alguém enorme na minha vida.",
-    action: "Abrir surpresa →"
-  }
-
-};
+const memoryCards =
+  document.querySelectorAll(".memory-card");
 
 
-// =========================
-// ABRIR MODAL
-// =========================
+memoryCards.forEach(card => {
 
-function openModal(title, text, action) {
+  card.addEventListener("click", () => {
 
-  modalTitle.textContent = title;
-
-  modalText.textContent = text;
-
-  modalAction.textContent = action;
-
-  modal.classList.add("active");
-
-}
+    // Descobre qual memória foi clicada
+    const memoryName =
+      card.dataset.memory;
 
 
-// =========================
-// FECHAR MODAL
-// =========================
+    // Procura essa memória no nosso "banco"
+    const memory =
+      memories[memoryName];
 
-function closeModal() {
+
+    // Se não encontrar, não faz nada
+    if (!memory) {
+      return;
+    }
+
+
+    // Coloca o título no modal
+    modalTitle.textContent =
+      memory.title;
+
+
+    // Coloca o texto no modal
+    modalText.textContent =
+      memory.text;
+
+
+    // Coloca o texto do botão
+    modalAction.textContent =
+      memory.button;
+
+
+    // Mostra o modal
+    modal.classList.add("active");
+
+  });
+
+});
+
+
+/* ==================================================
+   FECHAR O MODAL PELO X
+================================================== */
+
+modalClose.addEventListener("click", () => {
 
   modal.classList.remove("active");
 
-}
+});
 
 
-// =========================
-// MEMÓRIAS
-// =========================
-
-document
-  .querySelectorAll("[data-memory]")
-  .forEach(button => {
-
-    button.addEventListener("click", () => {
-
-      const type = button.dataset.memory;
-
-      const content = memories[type];
-
-      openModal(
-        content.title,
-        content.text,
-        content.action
-      );
-
-    });
-
-  });
-
-
-// =========================
-// CARTINHAS
-// =========================
-
-document
-  .querySelectorAll("[data-message]")
-  .forEach(button => {
-
-    button.addEventListener("click", () => {
-
-      const type = button.dataset.message;
-
-      const content = messages[type];
-
-      openModal(
-        content.title,
-        content.text,
-        content.action
-      );
-
-    });
-
-  });
-
-
-// =========================
-// DESTAQUES
-// =========================
-
-document
-  .querySelectorAll("[data-feature]")
-  .forEach(button => {
-
-    button.addEventListener("click", () => {
-
-      const type = button.dataset.feature;
-
-      const content = features[type];
-
-      openModal(
-        content.title,
-        content.text,
-        content.action
-      );
-
-    });
-
-  });
-
-
-// =========================
-// FECHAR NO X
-// =========================
-
-modalClose.addEventListener(
-  "click",
-  closeModal
-);
-
-
-// =========================
-// CLICAR FORA DO MODAL
-// =========================
+/* ==================================================
+   FECHAR CLICANDO FORA
+================================================== */
 
 modal.addEventListener("click", event => {
 
   if (event.target === modal) {
 
-    closeModal();
+    modal.classList.remove("active");
 
   }
 
 });
 
 
-// =========================
-// TECLA ESC
-// =========================
+/* ==================================================
+   FECHAR COM ESC
+================================================== */
 
 document.addEventListener("keydown", event => {
 
   if (event.key === "Escape") {
 
-    closeModal();
+    modal.classList.remove("active");
 
   }
 
 });
 
 
-// =========================
-// LER MAIS
-// =========================
+/* ==================================================
+   BOTÃO "VER MAIS"
+================================================== */
 
-document
-  .getElementById("readMoreButton")
-  .addEventListener("click", () => {
-
-    openModal(
-
-      "Um pouquinho sobre este cantinho ♡",
-
-      "Esse site foi feito especialmente para guardar memórias, mensagens e pequenos pedacinhos da nossa história.",
-
-      "Que bonito ♡"
-
-    );
-
-  });
+const viewMoreButton =
+  document.getElementById("viewMoreButton");
 
 
-// =========================
-// BOTÃO PARA VOCÊ
-// =========================
+viewMoreButton.addEventListener("click", () => {
 
-document
-  .getElementById("forYouButton")
-  .addEventListener("click", () => {
+  // Por enquanto, abre uma mensagem.
+  // Depois vamos transformar isso em uma
+  // página/galeria de memórias.
 
-    openModal(
+  modalTitle.textContent =
+    "Mais memórias ♡";
 
-      "Uma surpresa para você 𐙚",
+  modalText.textContent =
+    "Em breve teremos aqui um álbum completo com todas as nossas lembranças especiais.";
 
-      "Ainda estamos preparando essa parte... mas prometo que vai valer a pena.",
+  modalAction.textContent =
+    "Mal posso esperar ♡";
 
-      "Estou curiosa!"
+  modal.classList.add("active");
 
-    );
-
-  });
-
-
-// =========================
-// BOTÃO ENTRAR
-// =========================
-
-document
-  .getElementById("loginButton")
-  .addEventListener("click", () => {
-
-    openModal(
-
-      "Bem-vinda ♡",
-
-      "Este cantinho foi feito especialmente para você.",
-
-      "Entrar →"
-
-    );
-
-  });
+});
 
 
-// =========================
-// VER MAIS
-// =========================
+/* ==================================================
+   SETA DA SEÇÃO "MEMÓRIAS"
+================================================== */
 
-document
-  .getElementById("viewMoreButton")
-  .addEventListener("click", () => {
-
-    openModal(
-
-      "Mais memórias ⋆.˚",
-
-      "Aqui vamos colocar uma galeria completa com mais fotos e histórias.",
-
-      "Quero ver →"
-
-    );
-
-  });
+const memoriesArrow =
+  document.getElementById("memoriesArrow");
 
 
-// =========================
-// SETA DAS MEMÓRIAS
-// =========================
+memoriesArrow.addEventListener("click", () => {
 
-document
-  .getElementById("memoriesArrow")
-  .addEventListener("click", () => {
-
-    document
-      .getElementById("memorias")
-      .scrollIntoView({
-        behavior: "smooth"
-      });
-
-  });
-
-
-// =========================
-// BOTÃO DAS MENSAGENS
-// =========================
-
-document
-  .getElementById("messagesButton")
-  .addEventListener("click", () => {
-
-    document
-      .getElementById("mensagens")
-      .scrollIntoView({
-        behavior: "smooth"
-      });
-
-  });
-
-
-// =========================
-// FECHAR AVATARES
-// =========================
-
-document
-  .querySelectorAll(".avatar-close")
-  .forEach(button => {
-
-    button.addEventListener("click", event => {
-
-      event.stopPropagation();
-
-      const card =
-        button.closest(".avatar-card");
-
-      card.style.display = "none";
-
+  document
+    .getElementById("memorias")
+    .scrollIntoView({
+      behavior: "smooth"
     });
-
-  });
-
-
-// =========================
-// DOTS DO HERO
-// =========================
-
-const dots = document.querySelectorAll(".dot");
-
-dots.forEach(dot => {
-
-  dot.addEventListener("click", () => {
-
-    dots.forEach(item => {
-      item.classList.remove("active-dot");
-    });
-
-    dot.classList.add("active-dot");
-
-  });
 
 });

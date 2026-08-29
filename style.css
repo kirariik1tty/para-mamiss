@@ -19,6 +19,7 @@ RESET
 * {
 
   box-sizing: border-box;
+
   margin: 0;
   padding: 0;
 
@@ -27,8 +28,11 @@ RESET
 body {
 
 background-color: var(--bege);
+
 color: var(--roxo-escuro);
+
 font-family: Arial, sans-serif;
+
 padding: 25px;
 
 }
@@ -50,16 +54,21 @@ NAVBAR
 .navbar {
 
 width: 100%;
+
 max-width: 1200px;
+
 margin: auto;
 
 background-color: white;
+
 border-radius: 20px;
 
 padding: 14px 20px;
 
 display: flex;
+
 align-items: center;
+
 justify-content: space-between;
 
 box-shadow:
@@ -72,7 +81,9 @@ box-shadow:
 .nav-menu {
 
 display: flex;
+
 align-items: center;
+
 gap: 10px;
 
 }
@@ -83,9 +94,11 @@ width: 40px;
 height: 40px;
 
 border: none;
+
 border-radius: 50%;
 
 background-color: #f0eeee;
+
 color: var(--roxo-escuro);
 
 font-size: 18px;
@@ -101,6 +114,7 @@ transition: 0.2s;
 transform: translateY(-2px);
 
 background-color: var(--lilas);
+
 color: white;
 
 }
@@ -108,6 +122,7 @@ color: white;
 .nav-menu a {
 
 color: var(--roxo-escuro);
+
 text-decoration: none;
 
 font-size: 14px;
@@ -358,10 +373,7 @@ border-radius:
 160px 160px 30px 30px;
 
 border:
-10px solid rgba(255, 255, 255, 0.5);
-
-box-shadow:
-0 15px 35px rgba(75, 50, 80, 0.18);
+10px solid rgba(255,255,255,0.5);
 
 }
 
@@ -478,7 +490,7 @@ box-shadow:
 
 }
 
-/* CAIXA DA FOTO */
+/* A CAIXA DA FOTO */
 
 .memory-photo {
 
@@ -492,7 +504,7 @@ background-color: var(--lilas);
 
 }
 
-/* FOTO */
+/* A FOTO */
 
 .memory-photo img {
 
@@ -549,7 +561,7 @@ color: #756b75;
 }
 
 /* =========================
-GALERIA VER MAIS
+GALERIA - VER MAIS
 ========================= */
 
 .more-photos {
@@ -563,7 +575,7 @@ margin-top: 15px;
 display: grid;
 
 grid-template-columns:
-repeat(2, 1fr);
+1fr 1fr;
 
 gap: 10px;
 
@@ -577,9 +589,9 @@ height: 150px;
 
 object-fit: cover;
 
-border-radius: 15px;
-
 display: block;
+
+border-radius: 15px;
 
 cursor: pointer;
 

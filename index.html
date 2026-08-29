@@ -20,11 +20,6 @@
       <a href="#memorias">Memórias</a>
       <a href="#mensagens">Mensagens</a>
     </nav>
-
-    <div class="nav-right">
-      <button class="login-button" id="loginButton">Entrar</button>
-      <button class="signup-button" id="forYouButton">♡ Para você</button>
-    </div>
   </header>
 
   <main id="inicio">
@@ -52,7 +47,6 @@
 
       <div class="hero-decoration">♡</div>
 
-      <!-- FOTO AO LADO DO TÍTULO -->
       <div class="hero-photo" id="heroPhoto">
         <img src="imagens/mamis.jpeg" alt="Uma foto especial da mamãe">
       </div>
@@ -90,7 +84,6 @@
           </button>
         </div>
 
-        <!-- GALERIA - VER MAIS -->
         <div class="more-photos" id="morePhotos" hidden>
           <div class="photo-gallery">
             <img src="imagens/idk.jpeg" alt="Uma lembrança especial">
@@ -172,31 +165,55 @@
     <section class="floating-cards">
       <div class="avatar-card">
         <button class="avatar-close" aria-label="Fechar">×</button>
-        <div class="avatar">♡</div>
+        <div class="avatar" data-avatar="love">♡</div>
       </div>
 
       <div class="avatar-card">
         <button class="avatar-close" aria-label="Fechar">×</button>
-        <div class="avatar">✦</div>
+        <div class="avatar" data-avatar="fact">✦</div>
       </div>
     </section>
 
   </main>
 
-  <!-- MODAL DAS MEMÓRIAS -->
+  <!-- MODAL GERAL (memórias, cartinhas, porto seguro, avatares) -->
   <div class="modal" id="modal">
     <div class="modal-content">
       <button class="modal-close" id="modalClose" aria-label="Fechar">×</button>
       <span class="modal-decoration">♡</span>
-      <img id="modalImage" class="modal-image" src="" alt="">
+      <img id="modalImage" class="modal-image" src="" alt="" hidden>
       <h2 id="modalTitle">Título</h2>
       <p id="modalText">Conteúdo</p>
       <button class="modal-action" id="modalAction">Continuar →</button>
     </div>
   </div>
 
+  <!-- MODAL DO QUIZ -->
+  <div class="modal" id="quizModal">
+    <div class="modal-content">
+      <button class="modal-close" id="quizModalClose" aria-label="Fechar">×</button>
+      <span class="modal-decoration">♡</span>
+      <div id="quizBody"></div>
+    </div>
+  </div>
+
+  <!-- MODAL DA MÚSICA -->
+  <div class="modal" id="musicModal">
+    <div class="modal-content">
+      <button class="modal-close" id="musicModalClose" aria-label="Fechar">×</button>
+      <span class="modal-decoration">♪</span>
+      <h2>Nossa música</h2>
+      <p>Toda vez que essa música toca, penso em você.</p>
+      <audio controls class="music-player">
+        <source src="audio/nossa-musica.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
+      </audio>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
+</html>
 
 </body>
 

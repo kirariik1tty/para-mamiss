@@ -1,14 +1,16 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 
 <head>
 
   <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+
+>
 
   <title>Para Mamãe ♡</title>
 
@@ -19,7 +21,6 @@
 
 </head>
 
-
 <body>
 
   <!-- =========================
@@ -28,67 +29,68 @@
 
   <header class="navbar">
 
-    <div class="nav-left">
+```
+<div class="nav-left">
 
-      <button
-        class="circle-button"
-        id="profileButton"
-        aria-label="Abrir perfil"
-      >
-        ♡
-      </button>
+  <button
+    class="circle-button"
+    id="profileButton"
+    aria-label="Abrir perfil"
+  >
+    ♡
+  </button>
 
-      <button
-        class="circle-button"
-        id="addButton"
-        aria-label="Adicionar"
-      >
-        +
-      </button>
+  <button
+    class="circle-button"
+    id="addButton"
+    aria-label="Adicionar"
+  >
+    +
+  </button>
 
-    </div>
-
-
-    <nav class="nav-menu">
-
-      <a
-        href="#inicio"
-        class="active"
-      >
-        Início
-      </a>
-
-      <a href="#memorias">
-        Memórias
-      </a>
-
-      <a href="#mensagens">
-        Mensagens
-      </a>
-
-    </nav>
+</div>
 
 
-    <div class="nav-right">
+<nav class="nav-menu">
 
-      <button
-        class="login-button"
-        id="loginButton"
-      >
-        Entrar
-      </button>
+  <a
+    href="#inicio"
+    class="active"
+  >
+    Início
+  </a>
 
-      <button
-        class="signup-button"
-        id="forYouButton"
-      >
-        ♡ Para você
-      </button>
+  <a href="#memorias">
+    Memórias
+  </a>
 
-    </div>
+  <a href="#mensagens">
+    Mensagens
+  </a>
+
+</nav>
+
+
+<div class="nav-right">
+
+  <button
+    class="login-button"
+    id="loginButton"
+  >
+    Entrar
+  </button>
+
+  <button
+    class="signup-button"
+    id="forYouButton"
+  >
+    ♡ Para você
+  </button>
+
+</div>
+```
 
   </header>
-
 
   <!-- =========================
        CONTEÚDO
@@ -96,436 +98,485 @@
 
   <main id="inicio">
 
+```
+<!-- =========================
+     HERO
+========================= -->
 
-    <!-- =========================
-         HERO
-    ========================= -->
+<section class="hero">
 
-    <section class="hero">
+  <div class="hero-content">
 
-      <div class="hero-content">
+    <span class="hero-small">
+      PARA A MELHOR MÃE ♡
+    </span>
 
-        <span class="hero-small">
-          PARA A MELHOR MÃE ♡
-        </span>
+    <h1>
+      Feliz aniversário,<br>
+      mãe.
+    </h1>
 
-        <h1>
-          Feliz aniversário,<br>
-          mãe.
-        </h1>
+    <p>
+      Um pequeno cantinho feito especialmente
+      para celebrar você e todas as memórias
+      que construímos juntas.
+    </p>
 
-        <p>
-          Um pequeno cantinho feito especialmente
-          para celebrar você e todas as memórias
-          que construímos juntas.
-        </p>
-
-        <button
-          class="read-more"
-          id="readMoreButton"
-        >
-          Ler mais →
-        </button>
-
-
-        <div class="slider-dots">
-
-          <button
-            class="dot active-dot"
-            data-slide="0"
-            aria-label="Slide 1"
-          ></button>
-
-          <button
-            class="dot"
-            data-slide="1"
-            aria-label="Slide 2"
-          ></button>
-
-          <button
-            class="dot"
-            data-slide="2"
-            aria-label="Slide 3"
-          ></button>
-
-        </div>
-
-      </div>
+    <button
+      class="read-more"
+      id="readMoreButton"
+    >
+      Ler mais →
+    </button>
 
 
-      <div class="hero-decoration">
-        ♡
-      </div>
+    <div class="slider-dots">
+
+      <button
+        class="dot active-dot"
+        data-slide="0"
+        aria-label="Slide 1"
+      ></button>
+
+      <button
+        class="dot"
+        data-slide="1"
+        aria-label="Slide 2"
+      ></button>
+
+      <button
+        class="dot"
+        data-slide="2"
+        aria-label="Slide 3"
+      ></button>
+
+    </div>
+
+  </div>
 
 
-      <div
-  class="hero-photo"
-  id="heroPhoto"
->
+  <div class="hero-decoration">
+    ♡
+  </div>
 
-  <img
-    src="mamis.jpeg"
-    alt="Uma foto especial da mamãe"
+
+  <!-- FOTO AO LADO DO "Feliz aniversário, mãe." -->
+
+  <div
+    class="hero-photo"
+    id="heroPhoto"
   >
 
-</div>
-    </section>
+    <img
+      src="fotos/mamis.jpeg"
+      alt="Uma foto especial da mamãe"
+    >
 
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     GRID PRINCIPAL
+========================= -->
+
+<section class="content-grid">
+
+
+  <!-- =========================
+       MEMÓRIAS
+  ========================= -->
+
+  <section
+    class="artwork-section"
+    id="memorias"
+  >
+
+    <div class="section-title">
+
+      <h2>
+        Memórias
+      </h2>
+
+      <button
+        class="section-action"
+        id="memoriesArrow"
+        aria-label="Abrir memórias"
+      >
+        →
+      </button>
+
+    </div>
+
+
+    <!-- FOTOS DE DESTAQUE -->
+
+    <div class="memory-grid">
+
+
+      <!-- MEMÓRIA 1 -->
+
+      <button
+        class="memory-card"
+        data-memory="lembranca"
+      >
+
+        <div class="memory-photo">
+
+          <img
+            src="fotos/memoria-1.jpg"
+            alt="Uma lembrança com a mamãe"
+          >
+
+        </div>
+
+
+        <div class="memory-info">
+
+          <span>
+            uma lembrança ₊⊹
+          </span>
+
+          <small>
+            Clique para abrir
+          </small>
+
+        </div>
+
+      </button>
+
+
+
+      <!-- MEMÓRIA 2 -->
+
+      <button
+        class="memory-card"
+        data-memory="momento"
+      >
+
+        <div class="memory-photo">
+
+          <img
+            src="fotos/memoria-2.jpg"
+            alt="Um momento especial com a mamãe"
+          >
+
+        </div>
+
+
+        <div class="memory-info">
+
+          <span>
+            um momento ⋆.˚
+          </span>
+
+          <small>
+            Clique para abrir
+          </small>
+
+        </div>
+
+      </button>
+
+
+    </div>
 
 
     <!-- =========================
-         GRID PRINCIPAL
+         GALERIA "VER MAIS"
     ========================= -->
 
-    <section class="content-grid">
-
-
-      <!-- =========================
-           MEMÓRIAS
-      ========================= -->
-
-      <section
-        class="artwork-section"
-        id="memorias"
-      >
-
-        <div class="section-title">
-
-          <h2>
-            Memórias
-          </h2>
-
-          <button
-            class="section-action"
-            id="memoriesArrow"
-            aria-label="Abrir memórias"
-          >
-            →
-          </button>
-
-        </div>
-
-
-        <!-- FOTOS DE DESTAQUE -->
-
-        <div class="memory-grid">
-
-
-          <!-- MEMÓRIA 1 -->
-
-          <button
-            class="memory-card"
-            data-memory="lembranca"
-          >
-
-            <div class="memory-photo">
-
-              <img
-                src="imagens/memoria-1.jpg"
-                alt="Uma lembrança com a mamãe"
-              >
-
-            </div>
-
-
-            <div class="memory-info">
-
-              <span>
-                uma lembrança ₊⊹
-              </span>
-
-              <small>
-                Clique para abrir
-              </small>
-
-            </div>
-
-          </button>
-
-
-
-          <!-- MEMÓRIA 2 -->
-
-          <button
-            class="memory-card"
-            data-memory="momento"
-          >
-
-            <div class="memory-photo">
-
-              <img
-                src="imagens/memoria-2.jpg"
-                alt="Um momento especial com a mamãe"
-              >
-
-            </div>
-
-
-            <div class="memory-info">
-
-              <span>
-                um momento ⋆.˚
-              </span>
-
-              <small>
-                Clique para abrir
-              </small>
-
-            </div>
-
-          </button>
-
-
-        </div>
-
-
-        <button
-          class="view-button"
-          id="viewMoreButton"
-        >
-          Ver mais
-        </button>
-
-      </section>
-
-
-
-      <!-- =========================
-           CARTINHAS
-      ========================= -->
-
-      <section
-        class="search-section"
-        id="mensagens"
-      >
-
-        <div class="section-title">
-
-          <h2>
-            Cartinhas
-          </h2>
-
-          <button
-            class="section-action"
-            id="messagesButton"
-            aria-label="Abrir mensagens"
-          >
-            ×
-          </button>
-
-        </div>
-
-
-        <div class="message-list">
-
-
-          <button
-            class="message"
-            data-message="mensagem"
-          >
-
-            <span>♡</span>
-
-            <p>
-              Uma mensagem para você
-            </p>
-
-          </button>
-
-
-          <button
-            class="message"
-            data-message="admiracao"
-          >
-
-            <span>♡</span>
-
-            <p>
-              Coisas que admiro em você
-            </p>
-
-          </button>
-
-
-          <button
-            class="message"
-            data-message="memoria"
-          >
-
-            <span>♡</span>
-
-            <p>
-              Uma memória especial
-            </p>
-
-          </button>
-
-
-          <button
-            class="message selected"
-            data-message="amor"
-          >
-
-            <span>♡</span>
-
-            <p>
-              Por que eu te amo
-            </p>
-
-          </button>
-
-
-          <button
-            class="message"
-            data-message="saudade"
-          >
-
-            <span>♡</span>
-
-            <p>
-              Para ler quando sentir saudade
-            </p>
-
-          </button>
-
-
-        </div>
-
-      </section>
-
-
-
-      <!-- =========================
-           DESTAQUES
-      ========================= -->
-
-      <section class="ranking-section">
-
-
-        <button
-          class="ranking-card"
-          data-feature="inspiracao"
+    <div
+      class="more-photos"
+      id="morePhotos"
+      hidden
+    >
+
+      <div class="photo-gallery">
+
+        <img
+          src="fotos/foto-1.jpg"
+          alt="Uma lembrança especial com a mamãe"
         >
 
-          <div class="ranking-icon">
-            ☘︎
-          </div>
-
-          <div>
-
-            <h3>
-              Minha inspiração
-            </h3>
-
-            <p>
-              A  pessoa que mais me ensina todos os dias.
-            </p>
-
-          </div>
-
-        </button>
-
-
-
-        <button
-          class="ranking-card"
-          data-feature="porto"
+        <img
+          src="fotos/foto-2.jpg"
+          alt="Um momento especial com a mamãe"
         >
 
-          <div class="ranking-icon">
-            ʚɞ
-          </div>
-
-          <div>
-
-            <h3>
-              Meu porto seguro
-            </h3>
-
-            <p>
-              Meu local de acolhimento e cuidado.
-            </p>
-
-          </div>
-
-        </button>
-
-
-
-        <button
-          class="ranking-card"
-          data-feature="favorita"
+        <img
+          src="fotos/foto-3.jpg"
+          alt="Uma memória com a mamãe"
         >
 
-          <div class="ranking-icon">
-            𐙚
-          </div>
-
-          <div>
-
-            <h3>
-              Minha pessoa favorita
-            </h3>
-
-            <p>
-              Minha paz e minha maior paixão.
-            </p>
-
-          </div>
-
-        </button>
-
-
-      </section>
-
-    </section>
-
-
-
-    <!-- =========================
-         AVATARES
-    ========================= -->
-
-    <section class="floating-cards">
-
-
-      <div class="avatar-card">
-
-        <button
-          class="avatar-close"
-          aria-label="Fechar"
+        <img
+          src="fotos/foto-4.jpg"
+          alt="Uma lembrança com a mamãe"
         >
-          ×
-        </button>
 
-        <div class="avatar">
-          ♡
-        </div>
+        <img
+          src="fotos/foto-5.jpg"
+          alt="Mais uma lembrança especial"
+        >
+
+        <img
+          src="fotos/foto-6.jpg"
+          alt="Uma foto especial da mamãe"
+        >
 
       </div>
 
+    </div>
 
-      <div class="avatar-card">
 
-        <button
-          class="avatar-close"
-          aria-label="Fechar"
-        >
-          ×
-        </button>
+    <button
+      class="view-button"
+      id="viewMoreButton"
+    >
+      Ver mais
+    </button>
 
-        <div class="avatar">
-          ✦
-        </div>
+  </section>
+
+
+
+  <!-- =========================
+       CARTINHAS
+  ========================= -->
+
+  <section
+    class="search-section"
+    id="mensagens"
+  >
+
+    <div class="section-title">
+
+      <h2>
+        Cartinhas
+      </h2>
+
+      <button
+        class="section-action"
+        id="messagesButton"
+        aria-label="Abrir mensagens"
+      >
+        ×
+      </button>
+
+    </div>
+
+
+    <div class="message-list">
+
+
+      <button
+        class="message"
+        data-message="mensagem"
+      >
+
+        <span>♡</span>
+
+        <p>
+          Uma mensagem para você
+        </p>
+
+      </button>
+
+
+      <button
+        class="message"
+        data-message="admiracao"
+      >
+
+        <span>♡</span>
+
+        <p>
+          Coisas que admiro em você
+        </p>
+
+      </button>
+
+
+      <button
+        class="message"
+        data-message="memoria"
+      >
+
+        <span>♡</span>
+
+        <p>
+          Uma memória especial
+        </p>
+
+      </button>
+
+
+      <button
+        class="message selected"
+        data-message="amor"
+      >
+
+        <span>♡</span>
+
+        <p>
+          Por que eu te amo
+        </p>
+
+      </button>
+
+
+      <button
+        class="message"
+        data-message="saudade"
+      >
+
+        <span>♡</span>
+
+        <p>
+          Para ler quando sentir saudade
+        </p>
+
+      </button>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       DESTAQUES
+  ========================= -->
+
+  <section class="ranking-section">
+
+
+    <button
+      class="ranking-card"
+      data-feature="inspiracao"
+    >
+
+      <div class="ranking-icon">
+        ☘︎
+      </div>
+
+      <div>
+
+        <h3>
+          Minha inspiração
+        </h3>
+
+        <p>
+          A pessoa que mais me ensina todos os dias.
+        </p>
 
       </div>
 
+    </button>
 
-    </section>
+
+
+    <button
+      class="ranking-card"
+      data-feature="porto"
+    >
+
+      <div class="ranking-icon">
+        ʚɞ
+      </div>
+
+      <div>
+
+        <h3>
+          Meu porto seguro
+        </h3>
+
+        <p>
+          Meu local de acolhimento e cuidado.
+        </p>
+
+      </div>
+
+    </button>
+
+
+
+    <button
+      class="ranking-card"
+      data-feature="favorita"
+    >
+
+      <div class="ranking-icon">
+        𐙚
+      </div>
+
+      <div>
+
+        <h3>
+          Minha pessoa favorita
+        </h3>
+
+        <p>
+          Minha paz e minha maior paixão.
+        </p>
+
+      </div>
+
+    </button>
+
+
+  </section>
+
+</section>
+
+
+
+<!-- =========================
+     AVATARES
+========================= -->
+
+<section class="floating-cards">
+
+
+  <div class="avatar-card">
+
+    <button
+      class="avatar-close"
+      aria-label="Fechar"
+    >
+      ×
+    </button>
+
+    <div class="avatar">
+      ♡
+    </div>
+
+  </div>
+
+
+  <div class="avatar-card">
+
+    <button
+      class="avatar-close"
+      aria-label="Fechar"
+    >
+      ×
+    </button>
+
+    <div class="avatar">
+      ✦
+    </div>
+
+  </div>
+
+
+</section>
+```
 
   </main>
-
-
 
   <!-- =========================
        MODAL DAS MEMÓRIAS
@@ -536,52 +587,52 @@
     id="modal"
   >
 
-    <div class="modal-content">
+```
+<div class="modal-content">
 
-      <button
-        class="modal-close"
-        id="modalClose"
-        aria-label="Fechar"
-      >
-        ×
-      </button>
-
-
-      <span class="modal-decoration">
-        ♡
-      </span>
+  <button
+    class="modal-close"
+    id="modalClose"
+    aria-label="Fechar"
+  >
+    ×
+  </button>
 
 
-      <img
-        id="modalImage"
-        class="modal-image"
-        src=""
-        alt=""
-      >
+  <span class="modal-decoration">
+    ♡
+  </span>
 
 
-      <h2 id="modalTitle">
-        Título
-      </h2>
+  <img
+    id="modalImage"
+    class="modal-image"
+    src=""
+    alt=""
+  >
 
 
-      <p id="modalText">
-        Conteúdo
-      </p>
+  <h2 id="modalTitle">
+    Título
+  </h2>
 
 
-      <button
-        class="modal-action"
-        id="modalAction"
-      >
-        Continuar →
-      </button>
+  <p id="modalText">
+    Conteúdo
+  </p>
 
-    </div>
+
+  <button
+    class="modal-action"
+    id="modalAction"
+  >
+    Continuar →
+  </button>
+
+</div>
+```
 
   </div>
-
-
 
   <!-- =========================
        JAVASCRIPT

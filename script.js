@@ -1,10 +1,7 @@
-/* =========================
-   CONTEÚDO DAS MEMÓRIAS
-========================= */
 const memories = {
   lembranca: {
     title: "Uma lembrança ₊⊹",
-    image: "imagens/eu%20i%20ela.jpeg",
+    image: "imagens/eu i ela.jpeg",
     text: "Uma lembrança especial que quero guardar com você para sempre.",
     button: "Guardar essa lembrança ♡"
   },
@@ -16,10 +13,6 @@ const memories = {
   }
 };
 
-/* =========================
-   CONTEÚDO DAS CARTINHAS
-   [EDITE AQUI com textos de verdade pra ela]
-========================= */
 const cardMessages = {
   mensagem: {
     title: "Uma mensagem para você",
@@ -33,7 +26,7 @@ const cardMessages = {
   },
   memoria: {
     title: "Uma memória especial",
-    text: "[EDITE AQUI] Lembro como se fosse hoje daquele momento em que a gente...",
+    text: "Quando estávamos apenas nós duas num apartamento pequeno, era apenas eu e você... nossos eternos momentos efêmeros que guardo até hoje.",
     button: "Guardar ♡"
   },
   amor: {
@@ -48,7 +41,6 @@ const cardMessages = {
   }
 };
 
-/* Mensagem especial do card "Meu porto seguro" */
 const specialMessages = {
   porto: {
     title: "Meu porto seguro",
@@ -57,39 +49,34 @@ const specialMessages = {
   }
 };
 
-/* Motivos e curiosidades aleatórias dos avatares flutuantes
-   [EDITE AQUI com coisas reais de vocês] */
 const loveReasons = [
-  "Porque você sempre sabe o que dizer.",
-  "Porque seu abraço resolve qualquer dia ruim.",
+  "Porque você nem sempre sabe o que dizer, mas sabe estar presente.",
+  "Porque seu colo afugenta meus medos.",
   "Porque você nunca desistiu de mim.",
-  "Porque seu carinho é o meu lugar favorito.",
+  "Porque seu cheiro de mãe é meu aroma favorito.",
   "Porque você é a definição de amor incondicional."
 ];
 
 const funFacts = [
-  "Você é a pessoa que mais me faz rir no mundo inteiro.",
-  "Sua comida é sempre a mais gostosa, sem disputa.",
-  "Eu guardo mais fotos suas do que você imagina.",
+  "Adoro que nós temos um sinal igual no olho esquerdo.",
+  "Sua comida é sempre a mais gostosa, só perde para a da vovó.",
+  "Eu guardo mais fotos suas do que você imagina, bem mais.",
   "Seu conselho quase sempre está certo (quase).",
   "Você é minha pessoa favorita desde sempre."
 ];
 
-/* Perguntas do quiz "o quanto a gente se conhece"
-   [EDITE AQUI com perguntas reais de vocês, e o índice "correct"
-   é a posição da resposta certa dentro de "options", começando do 0] */
 const quizQuestions = [
   {
     question: "Qual é a nossa comida favorita pra fazer juntas?",
-    options: ["Bolo de chocolate", "Pizza", "Brigadeiro", "Arroz doce"],
-    correct: 0,
-    feedback: "Isso mesmo! Nosso clássico de sempre. ♡"
+    options: ["Torta", "Pizza", "Gelatina", "Chocolate quente"],
+    correct: 3,
+    feedback: "Isso mesmo! Nosso clássico de sempre e meu favorito. ♡"
   },
   {
     question: "Qual foi o nosso último passeio juntas?",
     options: ["Praia", "Shopping", "Casa da vovó", "Cinema"],
     correct: 2,
-    feedback: "Aquele dia foi tão bom! ♡"
+    feedback: "Aquele dia foi tão bom! devíamos ter comprado mais roupas rsrs ♡"
   },
   {
     question: "O que mais me lembra você?",
@@ -99,9 +86,6 @@ const quizQuestions = [
   }
 ];
 
-/* =========================
-   ELEMENTOS DO MODAL GERAL
-========================= */
 const modal = document.getElementById("modal");
 const modalClose = document.getElementById("modalClose");
 const modalImage = document.getElementById("modalImage");
@@ -136,9 +120,6 @@ modal.addEventListener("click", function (event) {
   }
 });
 
-/* =========================
-   ABRIR MEMÓRIA
-========================= */
 const memoryCards = document.querySelectorAll(".memory-card");
 
 memoryCards.forEach(function (card) {
@@ -148,9 +129,6 @@ memoryCards.forEach(function (card) {
   });
 });
 
-/* =========================
-   FOTOS DA GALERIA (Ver mais)
-========================= */
 const galleryImages = document.querySelectorAll(".photo-gallery img");
 
 galleryImages.forEach(function (image) {
@@ -164,9 +142,6 @@ galleryImages.forEach(function (image) {
   });
 });
 
-/* =========================
-   CARTINHAS
-========================= */
 const messageButtons = document.querySelectorAll(".message");
 
 messageButtons.forEach(function (button) {
@@ -179,9 +154,6 @@ messageButtons.forEach(function (button) {
   });
 });
 
-/* =========================
-   DESTAQUES (quiz / cartinha / música)
-========================= */
 const rankingCards = document.querySelectorAll(".ranking-card");
 
 rankingCards.forEach(function (card) {
@@ -198,9 +170,6 @@ rankingCards.forEach(function (card) {
   });
 });
 
-/* =========================
-   AVATARES FLUTUANTES
-========================= */
 const avatarIcons = document.querySelectorAll(".avatar");
 
 avatarIcons.forEach(function (avatar) {
@@ -226,9 +195,6 @@ avatarCloseButtons.forEach(function (button) {
   });
 });
 
-/* =========================
-   QUIZ
-========================= */
 const quizModal = document.getElementById("quizModal");
 const quizModalClose = document.getElementById("quizModalClose");
 const quizBody = document.getElementById("quizBody");
@@ -304,9 +270,6 @@ quizModal.addEventListener("click", function (event) {
   }
 });
 
-/* =========================
-   MÚSICA
-========================= */
 const musicModal = document.getElementById("musicModal");
 const musicModalClose = document.getElementById("musicModalClose");
 
@@ -324,9 +287,6 @@ musicModal.addEventListener("click", function (event) {
   }
 });
 
-/* =========================
-   TECLA ESC (fecha qualquer modal aberto)
-========================= */
 document.addEventListener("keydown", function (event) {
   if (event.key === "Escape") {
     modal.classList.remove("show");
@@ -335,9 +295,6 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-/* =========================
-   BOTÃO VER MAIS
-========================= */
 const viewMoreButton = document.getElementById("viewMoreButton");
 const morePhotos = document.getElementById("morePhotos");
 
@@ -353,9 +310,6 @@ viewMoreButton.addEventListener("click", function () {
   }
 });
 
-/* =========================
-   DOTS DO HERO
-========================= */
 const dots = document.querySelectorAll(".dot");
 
 dots.forEach(function (dot) {
@@ -363,5 +317,4 @@ dots.forEach(function (dot) {
     dots.forEach(function (item) { item.classList.remove("active-dot"); });
     dot.classList.add("active-dot");
   });
-});
 });

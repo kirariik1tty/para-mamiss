@@ -1,6 +1,3 @@
-/* =========================
-   CORES
-========================= */
 :root {
   --bege: #C9BEAC;
   --lilas: #A78AA0;
@@ -9,9 +6,6 @@
   --vinho: #5E2B54;
 }
 
-/* =========================
-   RESET
-========================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -29,9 +23,7 @@ button {
   font-family: inherit;
 }
 
-/* =========================
-   NAVBAR
-========================= */
+/* NAVBAR */
 .navbar {
   width: 100%;
   max-width: 1200px;
@@ -45,9 +37,7 @@ button {
   box-shadow: 0 8px 25px rgba(75, 50, 80, 0.08);
 }
 
-.nav-left,
-.nav-right,
-.nav-menu {
+.nav-left, .nav-right, .nav-menu {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -82,8 +72,7 @@ button {
   border-bottom: 2px solid var(--vinho);
 }
 
-.login-button,
-.signup-button {
+.login-button, .signup-button {
   padding: 10px 18px;
   border-radius: 20px;
   font-size: 14px;
@@ -102,17 +91,13 @@ button {
   color: white;
 }
 
-/* =========================
-   MAIN
-========================= */
+/* MAIN */
 main {
   max-width: 1200px;
   margin: 25px auto;
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 .hero {
   min-height: 420px;
   position: relative;
@@ -191,9 +176,7 @@ main {
   transform: rotate(-15deg);
 }
 
-/* =========================
-   FOTO DO HERO
-========================= */
+/* FOTO DO HERO */
 .hero-photo {
   position: absolute;
   right: 50px;
@@ -214,9 +197,7 @@ main {
   border: 10px solid rgba(255,255,255,0.5);
 }
 
-/* =========================
-   GRID
-========================= */
+/* GRID */
 .content-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr;
@@ -224,8 +205,7 @@ main {
   margin-top: 20px;
 }
 
-.artwork-section,
-.search-section {
+.artwork-section, .search-section {
   background-color: rgba(255,255,255,0.35);
   border-radius: 25px;
   padding: 25px;
@@ -251,9 +231,7 @@ main {
   cursor: pointer;
 }
 
-/* =========================
-   MEMÓRIAS
-========================= */
+/* MEMÓRIAS */
 .memory-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -315,9 +293,7 @@ main {
   color: #756b75;
 }
 
-/* =========================
-   GALERIA - VER MAIS
-========================= */
+/* GALERIA - VER MAIS */
 .more-photos {
   margin-top: 15px;
 }
@@ -361,9 +337,7 @@ main {
   color: white;
 }
 
-/* =========================
-   CARTINHAS
-========================= */
+/* CARTINHAS */
 .message-list {
   display: flex;
   flex-direction: column;
@@ -398,9 +372,7 @@ main {
   color: white;
 }
 
-/* =========================
-   DESTAQUES
-========================= */
+/* DESTAQUES */
 .ranking-section {
   display: flex;
   flex-direction: column;
@@ -450,9 +422,7 @@ main {
   color: #756b75;
 }
 
-/* =========================
-   AVATARES
-========================= */
+/* AVATARES */
 .floating-cards {
   display: flex;
   gap: 15px;
@@ -496,9 +466,7 @@ main {
   font-size: 25px;
 }
 
-/* =========================
-   MODAL
-========================= */
+/* MODAL */
 .modal {
   position: fixed;
   inset: 0;
@@ -575,59 +543,21 @@ main {
   cursor: pointer;
 }
 
-/* =========================
-   CELULAR
-========================= */
+/* CELULAR */
 @media (max-width: 800px) {
-  body {
-    padding: 12px;
-  }
-
-  .nav-menu {
-    display: none;
-  }
-
-  .nav-right .login-button {
-    display: none;
-  }
-
-  .hero {
-    padding: 35px 25px;
-    min-height: 550px;
-  }
-
-  .hero-photo {
-    width: 220px;
-    height: 260px;
-    right: 20px;
-    bottom: -20px;
-  }
-
-  .content-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .memory-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .memory-photo {
-    height: 150px;
-  }
-
-  .photo-gallery {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .photo-gallery img {
-    height: 130px;
-  }
-
-  .floating-cards {
-    margin-left: 0;
-    justify-content: center;
-  }
-
+  body { padding: 12px; }
+  .nav-menu { display: none; }
+  .nav-right .login-button { display: none; }
+  .hero { padding: 35px 25px; min-height: 550px; }
+  .hero-photo { width: 220px; height: 260px; right: 20px; bottom: -20px; }
+  .content-grid { grid-template-columns: 1fr; }
+  .memory-grid { grid-template-columns: 1fr 1fr; }
+  .memory-photo { height: 150px; }
+  .photo-gallery { grid-template-columns: 1fr 1fr; }
+  .photo-gallery img { height: 130px; }
+  .floating-cards { margin-left: 0; justify-content: center; }
+  .modal-image { height: 220px; }
+}
   .modal-image {
     height: 220px;
   }

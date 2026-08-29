@@ -9,7 +9,7 @@ lembranca: {
 ```
 title: "Uma lembrança ₊⊹",
 
-image: "fotos/memoria-1.jpg",
+image: "imagens/eu%20i%20ela.jpeg",
 
 text:
   "Uma lembrança especial que quero guardar com você para sempre.",
@@ -25,7 +25,7 @@ momento: {
 ```
 title: "Um momento ⋆.˚",
 
-image: "fotos/memoria-2.jpg",
+image: "imagens/fofos.jpeg",
 
 text:
   "Um daqueles pequenos momentos que acabaram se tornando enormes na minha memória.",
@@ -206,6 +206,44 @@ if (isHidden) {
 );
 
 /* =========================
+FOTOS DA GALERIA
+========================= */
+
+const galleryImages =
+document.querySelectorAll(".photo-gallery img");
+
+galleryImages.forEach(function(image) {
+
+image.addEventListener(
+"click",
+function() {
+
+```
+  modalImage.src =
+    image.src;
+
+  modalImage.alt =
+    image.alt;
+
+  modalTitle.textContent =
+    "Uma lembrança especial ♡";
+
+  modalText.textContent =
+    "Mais um pedacinho das nossas memórias.";
+
+  modalAction.textContent =
+    "Que memória bonita ♡";
+
+  modal.classList.add("show");
+
+}
+```
+
+);
+
+});
+
+/* =========================
 AVATARES
 ========================= */
 
@@ -257,44 +295,6 @@ function() {
   dot.classList.add(
     "active-dot"
   );
-
-}
-```
-
-);
-
-});
-
-/* =========================
-FOTOS DA GALERIA
-========================= */
-
-const galleryImages =
-document.querySelectorAll(".photo-gallery img");
-
-galleryImages.forEach(function(image) {
-
-image.addEventListener(
-"click",
-function() {
-
-```
-  modalImage.src =
-    image.src;
-
-  modalImage.alt =
-    image.alt;
-
-  modalTitle.textContent =
-    "Uma lembrança especial ♡";
-
-  modalText.textContent =
-    "Mais um pedacinho das nossas memórias.";
-
-  modalAction.textContent =
-    "Que memória bonita ♡";
-
-  modal.classList.add("show");
 
 }
 ```
